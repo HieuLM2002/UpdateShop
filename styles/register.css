@@ -1,0 +1,88 @@
+:root {
+    --text-color: rgba(255, 255, 255, 0.959);
+}
+
+body {
+    height           : 100vh;
+    background-repeat: no-repeat;
+    background-size  : cover;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+
+}
+
+.register-box {
+    width        : 24em;
+    padding      : 0px 26px;
+    background   : rgba(0, 0, 0, 0.5);
+    box-sizing   : border-box;
+    box-shadow   : 0 15px 25px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.register-box h2 {
+    margin-top: 30px;
+    color     : var(--text-color);
+    text-align: center;
+}
+
+.register-box .user-box input {
+    width        : 100%;
+    padding      : 5px 0;
+    font-size    : 14px;
+    color        : var(--text-color);
+    border       : none;
+    border-bottom: 1px solid #000000;
+    outline      : none;
+    background   : transparent;
+}
+
+.register-box .user-box label {
+    font-size     : 14px;
+    color         : var(--text-color);
+    pointer-events: none;
+    transition    : .5s;
+    margin-bottom : 10px;
+}
+
+.register-box .user-box input:focus~label,
+.register-box .user-box input:valid~label {
+    color    : var(--text-color);
+    font-size: 12px;
+}
+
+.register-box form button {
+    font-size     : 14px;
+    overflow      : hidden;
+    transition    : .5s;
+    margin-top    : 22px;
+    letter-spacing: 4px;
+    border-radius : 5px;
+    padding       : 7px;
+    width         : 100%;
+}
+
+.register-box button:hover {
+    box-shadow: 0 0 2px #f2f3f7,
+        0 0 10px rgb(255, 255, 255),
+        0 0 10px #fefefe,
+        0 0 10px #ffffff;
+}
+
+.not-member {
+    color: var(--text-color);
+}
+
+.not-member a:hover {
+    color: rgb(202, 19, 19);
+}
+
+.user-box.invalid .form-control {
+    border-color: #ff0000;
+}
+
+.user-box.invalid .form-message {
+    color    : #ff0000;
+    font-size: 14px;
+}
